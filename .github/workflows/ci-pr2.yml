@@ -31,4 +31,4 @@ jobs:
         working-directory: pr2
         run: |
           source venv/bin/activate
-          pytest
+          pytest tests_calc.py
