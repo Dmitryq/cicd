@@ -1,6 +1,12 @@
 name: Run Tests
 
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - 'pr2/**'
+  pull_request:
+    paths:
+      - 'pr2/**'
 
 jobs:
   test:
