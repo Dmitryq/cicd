@@ -26,6 +26,5 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./pr3
-          file: ./pr3/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/python-flask-with-redis:latest
