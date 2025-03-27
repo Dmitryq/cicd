@@ -16,6 +16,3 @@ def hello():
   count = get_hit_count()
   return f"Эту страницу посетили {count} раз/а.\n"
 
-
-
-
