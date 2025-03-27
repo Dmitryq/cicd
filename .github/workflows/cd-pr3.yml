@@ -25,6 +25,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: ./pr3
+          context: ./pr3/app
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/python-flask-with-redis:latest
