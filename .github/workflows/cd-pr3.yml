@@ -27,4 +27,4 @@ jobs:
         with:
           context: ./pr3/app
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/python-flask-with-redis:latest
+          tags: ${{ env.REGISTRY }}/${{ github.repository }}/flask-redis:${{ github.sha }}
