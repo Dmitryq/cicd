@@ -15,7 +15,7 @@ jobs:
       contents: read
       id-token: write
       packages: write
-      
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -43,5 +43,5 @@ jobs:
         uses: actions/attest-build-provenance@v2
         with:
           subject-name: index.docker.io/dmitryqdocker/cicd-pr
-          subject-digest: ${{ steps.build-and-push.outputs.digest }}
+          subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
