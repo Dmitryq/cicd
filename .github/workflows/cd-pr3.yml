@@ -27,4 +27,4 @@ jobs:
         with:
           context: ./pr3/app
           push: true
-          tags: ${{ env.REGISTRY }}/${{ github.repository }}/flask-redis:${{ github.sha }}
+          tags: ghcr.io/${{ github.repository }}/flask-redis:${{ github.sha }}
