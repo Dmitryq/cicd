@@ -69,6 +69,4 @@ jobs:
                 cd $DEPLOY_DIR && git pull origin main
             fi
             cd $DEPLOY_DIR
-            docker-compose pull
-            docker-compose down
-            docker-compose up -d
+            docker compose up -d
