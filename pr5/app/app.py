@@ -16,3 +16,4 @@ def hello():
   count = get_hit_count()
   return f"Количество загрузок страницы: {count}.\n"
 
+
