@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI/CD Pipeline (pr4)
 
 on:
   push:
@@ -64,7 +64,7 @@ jobs:
       - name: Build and push Docker image for Python ${{ matrix.python-version }}
         uses: docker/build-push-action@v4
         with:
-            context: ./pr3-4/app
+            context: ./pr4/app
             push: true
             build-args: |
                 PYTHON_VERSION=${{ matrix.python-version }}
