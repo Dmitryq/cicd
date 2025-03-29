@@ -1,4 +1,4 @@
-name: CI/CD Pipeline (pr4)
+name: Test and publish python app (pr4)
 
 on:
   push:
@@ -67,5 +67,6 @@ jobs:
         with:
             context: ./pr4/
             push: true
-            build-args: PYTHON_VERSION=${{ matrix.python-version }}
+            build-args: |
+            PYTHON_VERSION=${{ matrix.python-version }}
             tags: dmitryqdocker/cicd-pr4:${{ matrix.python-version }}

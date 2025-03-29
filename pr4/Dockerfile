@@ -1,3 +1,4 @@
+ARG PYTHON_VERSION
 FROM python:${PYTHON_VERSION}-slim
 COPY requirements.txt requirements.txt
 COPY app.py app.py
