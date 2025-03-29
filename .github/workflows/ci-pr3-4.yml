@@ -38,7 +38,7 @@ jobs:
         id: push
         uses: docker/build-push-action@v4
         with:
-          context: ./pr3/app
+          context: ./pr3-4/app
           push: true
           tags: ${{ steps.meta.outputs.tags }}
         
