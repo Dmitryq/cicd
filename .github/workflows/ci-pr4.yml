@@ -68,5 +68,5 @@ jobs:
             context: ./pr4/
             push: true
             build-args: |
-            PYTHON_VERSION=${{ matrix.python-version }}
+                PYTHON_VERSION=${{ matrix.python-version }}
             tags: dmitryqdocker/cicd-pr4:${{ matrix.python-version }}
