@@ -69,5 +69,5 @@ jobs:
                 cd $DEPLOY_DIR && git pull origin main
             fi
             cd $DEPLOY_DIR/pr5
-            docker-compose up -d
+            docker compose up -d
       
