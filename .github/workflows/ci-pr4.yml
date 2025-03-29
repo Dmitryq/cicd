@@ -64,7 +64,7 @@ jobs:
       - name: Build and push Docker image for Python ${{ matrix.python-version }}
         uses: docker/build-push-action@v4
         with:
-            context: ./pr4/app
+            context: ./pr4/
             push: true
             build-args: |
                 PYTHON_VERSION=${{ matrix.python-version }}
