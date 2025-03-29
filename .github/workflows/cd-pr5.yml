@@ -62,11 +62,12 @@ jobs:
           key: '${{ secrets.SSH_PRIVATE_KEY }}'
           port: '${{ secrets.SSH_PORT }}'
           script: |
-            DEPLOY_DIR="/home/${{ secrets.SERVER_USER }}/cd_docker_project"
+            DEPLOY_DIR="/home/cd_docker_project"
             if [ ! -d "$DEPLOY_DIR" ]; then
                 git clone https://github.com/Dmitryq/cicd.git $DEPLOY_DIR
             else
                 cd $DEPLOY_DIR && git pull origin main
             fi
-            cd $DEPLOY_DIR
-            docker compose up -d
+            cd $DEPLOY_DIR/pr5
+            docker-compose up -d
+      
