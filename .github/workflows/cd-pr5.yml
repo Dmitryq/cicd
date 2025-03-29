@@ -64,7 +64,7 @@ jobs:
           script: |
             DEPLOY_DIR="/home/${{ secrets.SERVER_USER }}/cd_docker_project"
             if [ ! -d "$DEPLOY_DIR" ]; then
-                git clone https://github.com/your-username/cd_docker_project.git $DEPLOY_DIR
+                git clone https://github.com/Dmitryq/cicd.git $DEPLOY_DIR
             else
                 cd $DEPLOY_DIR && git pull origin main
             fi
