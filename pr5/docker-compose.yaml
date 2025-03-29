@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  web:
+    image: dmitryqdocker/cicd-pr5:main
+    ports:
+      - "80:5000"
+    networks:
+      - app-network
+
+  redis:
+    image: redis:alpine
+    volumes:
+      - pr5-redis:/data
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  pr5-redis:
